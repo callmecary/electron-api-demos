@@ -6,22 +6,35 @@ const path = require('path')
 const fetchBtn = document.getElementById('fetch-data')
 
 fetchBtn.addEventListener('click', (event) => {
-  const modalPath = path.join('file://', __dirname, '../../sections/channels/channel.html')
+  console.log("Button clicked!");
 })
 
-class MyRow extends React.Component {
+class Table extends React.Component {
   render() {
+    const listItems = this.props.rows.map((row)=>
+      <tr>
+        <td>photo.css.{row}</td>
+        <td>CSS</td>
+        <td>27K</td>
+      </tr>
+    );
     return (
-            <tr>
-                <td>photon.css</td>
-                <td>CSS</td>
-                <td>27K</td>
-            </tr>
+      <table>
+      <thead>
+          <tr>
+            <th>Name</th>
+            <th>Kind</th>
+            <th>File Size</th>
+          </tr>
+      </thead>
+      <tbody>{listItems}</tbody>
+      </table>
     );
   }
 }
 
+const rows = [1,2,3,4,5]
 ReactDOM.render(
-  <MyRow />,
-  document.getElementById('data-rows')
-);
+  <Table rows = {rows}/>,
+  document.getElementById('data')
+)
