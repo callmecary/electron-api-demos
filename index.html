@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="assets/css/github.css">
 
   <link rel="import" href="sections/about.html">
+  <link rel="import" href="sections/channels/channel.html">
   <link rel="import" href="sections/windows/windows.html">
   <link rel="import" href="sections/windows/crash-hang.html">
   <link rel="import" href="sections/menus/menus.html">
@@ -35,6 +36,14 @@
       <h1 class="nav-title">Electron <strong>API Demos</strong></h1>
       <svg class="nav-header-icon"><use xlink:href="assets/img/icons.svg#icon-electron"></use></svg>
     </header>
+
+    <div class="nav-item u-category-windows">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
+        Channels
+      </h5>
+      <button type="button" id="button-windows" data-section="channel" class="nav-button">Channel_01</button>
+    </div>
 
     <div class="nav-item u-category-windows">
       <h5 class="nav-category">
@@ -82,14 +91,6 @@
       <button type="button" id="button-protocol" data-section="protocol" class="nav-button">Launch app from <em>protocol handler</em></button>
     </div>
 
-    <div class="nav-item u-category-media">
-      <h5 class="nav-category">
-        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-media"></use></svg>
-        Media
-      </h5>
-      <button type="button" id="button-pdf" data-section="pdf" class="nav-button"><em>Print</em> to PDF</button>
-      <button type="button" id="button-desktop-capturer" data-section="desktop-capturer" class="nav-button">Take a <em>screenshot</em></button>
-    </div>
 
     <footer class="nav-footer">
       <button type="button" id="button-about" data-modal="about" class="nav-footer-button">About</button>

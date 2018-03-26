@@ -1,0 +1,34 @@
+<template class="task-template">
+    <section id="channel-section" class="section js-section u-category-windows">
+      <header class="section-header">
+        <div class="section-wrapper">
+          <h1>
+            <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
+            Channel_01
+          </h1>
+          <button id = "fetch-data" class="js-container-target demo-button">
+              Fetch data
+          </button>
+        </div>
+      </header>
+  
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Kind</th>
+            <th>File Size</th>
+          </tr>
+        </thead>
+        <tbody id="data-rows">
+        </tbody>
+      </table>
+  
+      <script type="text/javascript">
+        require('babel-register');
+        require('./renderer-process/channels/fetch-data');
+      </script>
+  
+    </section>
+  </template>
+  
