@@ -11,13 +11,16 @@ fetchBtn.addEventListener('click', (event) => {
 
 class Table extends React.Component {
   render() {
-    const listItems = this.props.rows.map((row)=>
-      <tr>
-        <td>photo.css.{row}</td>
-        <td>CSS</td>
-        <td>27K</td>
-      </tr>
-    );
+    const rows = [];
+    this.props.rows.forEach((row) => {
+      rows.push(
+        <tr>
+          <td> photo.css.{row} </td>
+          <td> CSS </td>
+          <td> 27K </td>
+        </tr>
+      );
+    });
     return (
       <table>
       <thead>
@@ -27,7 +30,7 @@ class Table extends React.Component {
             <th>File Size</th>
           </tr>
       </thead>
-      <tbody>{listItems}</tbody>
+      <tbody>{rows}</tbody>
       </table>
     );
   }
