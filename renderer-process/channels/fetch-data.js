@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+require('grpc')
 const path = require('path')
 
 const fetchBtn = document.getElementById('fetch-data')
@@ -36,7 +36,7 @@ class Table extends React.Component {
   }
 }
 
-const rows = [1,2,3,4,5]
+const rows = [1,2,3,4,5,6,7,8,9]
 ReactDOM.render(
   <Table rows = {rows}/>,
   document.getElementById('data')
